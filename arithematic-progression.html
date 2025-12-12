@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch 5: Arithmetic Progressions | Maths in Motion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chapter-common.css">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+    <header>
+        <h1>Maths in Motion</h1>
+        <nav>
+            <a href="concept-stories.html" class="aesthetic-button small-button">📚 Back to Stories</a>
+            <button id="drishti-toggle" class="aesthetic-button small-button feature-4">✨ Explain Like I'm Drishti</button>
+            <button id="dark-mode-toggle" class="aesthetic-button small-button">🌙 Sepia Mode</button>
+        </nav>
+    </header>
+
+    <main class="section-container chapter-page">
+        <h2 class="chapter-title">Chapter 5: Arithmetic Progressions</h2>
+        <h3 class="chapter-metaphor">Steps on a Staircase: The Rhythmic Advance of Life</h3>
+        
+        <article class="concept-section">
+            <p>An Arithmetic Progression (AP) is a journey where every step you take is exactly the same size. It’s the mathematics of rhythm, pattern, and predictability. Every AP is defined by just two things: the **Starting Point** ($a$) and the **Step Size** ($d$).</p>
+            
+            <div class="story-illustration">
+                <svg viewBox="0 0 600 250" class="ap-staircase-svg">
+                    <line x1="50" y1="200" x2="550" y2="200" stroke="var(--color-warm-grey)" stroke-width="1"/>
+                    
+                    <g stroke="var(--color-sage-green)" stroke-width="3" fill="var(--color-beige-section)">
+                        <path d="M 100 200 L 100 170 L 130 170 L 130 200" />
+                        <path d="M 160 200 L 160 140 L 190 140 L 190 200" />
+                        <path d="M 220 200 L 220 110 L 250 110 L 250 200" />
+                        <path d="M 280 200 L 280 80 L 310 80 L 310 200" />
+                        <text x="115" y="230" fill="var(--color-text-dark)" text-anchor="middle">Term 1 (a)</text>
+                        <text x="175" y="230" fill="var(--color-text-dark)" text-anchor="middle">Term 2</text>
+                        <text x="235" y="230" fill="var(--color-text-dark)" text-anchor="middle">Term 3</text>
+                        <text x="295" y="230" fill="var(--color-text-dark)" text-anchor="middle">Term 4</text>
+                    </g>
+                    <text x="145" y="165" fill="var(--color-muted-gold)" font-size="12pt" font-weight="bold">d</text>
+                    <text x="205" y="135" fill="var(--color-muted-gold)" font-size="12pt" font-weight="bold">d</text>
+                </svg>
+                 [Aesthetic representation of a series of steps increasing by a common height 'd']
+            </div>
+            
+            <h4>The $n^{th}$ Term: Finding Your Future Position</h4>
+            <p>If you know your starting point ($a$) and your step size ($d$), you can instantly calculate your exact position after any number of steps ($n$). This is the formula for the $n^{th}$ term, $a_n$. It is the ultimate tool for prediction in a rhythmic sequence.</p>
+
+            <button class="aesthetic-button show-formula-toggle" data-target="nth-term-formula">Show The Position Finder Formula</button>
+            <div id="nth-term-formula" class="formula-box hidden">
+                <p><strong>Formula for the $n^{th}$ Term:</strong></p>
+                $$\large a_n = a + (n-1)d$$
+                <p class="explanation">To reach the $n^{th}$ step, you start at $a$ and take $n-1$ steps of size $d$.</p>
+            </div>
+
+            <h4>The Sum: The Total Effort Expended</h4>
+            <p>Sometimes the goal isn't just to find the final position, but to calculate the **total distance covered** or the **cumulative effort** expended up to that point. This is the sum of the first $n$ terms, $S_n$. This formula leverages the symmetry of the AP sequence to simplify a long addition.</p>
+            
+            <button class="aesthetic-button show-formula-toggle" data-target="sum-term-formula">Show The Total Effort Formula</button>
+            <div id="sum-term-formula" class="formula-box hidden">
+                <p><strong>Formula for the Sum of $n$ Terms:</strong></p>
+                $$\large S_n = \frac{n}{2} [2a + (n-1)d]$$
+                <p>OR (if you know the last term, $l$):</p>
+                $$\large S_n = \frac{n}{2} [a + l]$$
+            </div>
+
+            <hr>
+            <h4 class="concept-break">Finding the Middle Ground (Arithmetic Mean)</h4>
+            <p>If three numbers $a$, $b$, and $c$ are in AP, the middle term $b$ is exactly the average of the outer terms, $a$ and $c$. This illustrates that the middle ground in a rhythmic sequence is always perfectly balanced.</p>
+            
+            <button class="aesthetic-button make-it-real-toggle" data-formula="Arithmetic Progression">⭐ Make it Real</button>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
