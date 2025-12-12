@@ -1,0 +1,50 @@
+/* concept-stories.css */
+/* Chapter List Styling */
+.poetic-intro {
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--color-warm-grey);
+}
+
+.chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.chapter-card {
+    display: block;
+    padding: 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--color-text-dark);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.chapter-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.chapter-card h3 {
+    margin-top: 0;
+    font-size: 1.4em;
+    color: var(--color-muted-gold);
+}
+
+.chapter-card p {
+    font-size: 0.95em;
+    margin-bottom: 0;
+}
+
+/* Color Coding the cards for aesthetic variety */
+.card-rose { background-color: rgba(201, 153, 162, 0.1); } /* Dusty Rose transparent */
+.card-sage { background-color: rgba(156, 183, 169, 0.1); } /* Sage Green transparent */
+.card-gold { background-color: rgba(201, 164, 75, 0.1); } /* Muted Gold transparent */
+
+/* Ensure dark mode colors adapt the text/headings */
+body.dark-mode .chapter-card {
+    color: var(--color-text-dark); /* Ensure text is light */
+}
