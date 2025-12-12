@@ -1,0 +1,45 @@
+/* ADD THIS TO chapter-common.css */
+.trig-table-container {
+    overflow-x: auto; /* Ensures table is fully viewable on small screens */
+    margin: 30px 0;
+    padding: 10px;
+    border: 1px solid var(--color-warm-grey);
+    border-radius: 8px;
+    background-color: var(--color-beige-section);
+}
+
+.aesthetic-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.05em;
+    text-align: center;
+}
+
+.aesthetic-table th, .aesthetic-table td {
+    padding: 15px 10px;
+    border: 1px solid var(--color-warm-grey);
+    color: var(--color-text-dark);
+}
+
+.aesthetic-table thead th {
+    background-color: var(--color-muted-gold);
+    color: var(--color-text-light);
+    font-weight: bold;
+}
+
+.aesthetic-table tbody th {
+    background-color: rgba(201, 153, 162, 0.1); /* Dusty rose background for row header */
+}
+
+/* Dark Mode adaptation for the table */
+body.dark-mode .trig-table-container {
+    background-color: var(--color-beige-section); /* Darker base for table */
+    border-color: var(--color-warm-grey);
+}
+body.dark-mode .aesthetic-table thead th {
+    background-color: var(--color-dusty-rose);
+    color: var(--color-cream-background);
+}
+body.dark-mode .aesthetic-table tbody th {
+    background-color: rgba(156, 183, 169, 0.1); /* Sage background */
+}
