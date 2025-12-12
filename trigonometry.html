@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch 8: Trigonometry | Maths in Motion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chapter-common.css">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+    <header>
+        <h1>Maths in Motion</h1>
+        <nav>
+            <a href="concept-stories.html" class="aesthetic-button small-button">📚 Back to Stories</a>
+            <button id="drishti-toggle" class="aesthetic-button small-button feature-4">✨ Explain Like I'm Drishti</button>
+            <button id="dark-mode-toggle" class="aesthetic-button small-button">🌙 Sepia Mode</button>
+        </nav>
+    </header>
+
+    <main class="section-container chapter-page">
+        <h2 class="chapter-title">Chapter 8: Introduction to Trigonometry</h2>
+        <h3 class="chapter-metaphor">Measuring the Unreachable: The Secret Language of Angles</h3>
+        
+        <article class="concept-section">
+            <p>Trigonometry (Trig) is the ancient magic used to measure things we cannot physically reach, like the height of a mountain or the distance to a star. It reveals the fundamental relationship between the **angles** and the **sides** of a right-angled triangle. The entire language is built upon the stable foundation of the $90^\circ$ angle.</p>
+            
+            <div class="story-illustration">
+                <svg viewBox="0 0 500 250" class="right-triangle-svg">
+                    <polygon points="100,200 100,50 350,200" fill="rgba(156, 183, 169, 0.2)" stroke="var(--color-sage-green)" stroke-width="2"/>
+                    <rect x="100" y="190" width="10" height="10" stroke="var(--color-muted-gold)" fill="var(--color-muted-gold)"/>
+                    
+                    <text x="70" y="195" fill="var(--color-text-dark)">B</text>
+                    <text x="70" y="55" fill="var(--color-text-dark)">A</text>
+                    <text x="365" y="215" fill="var(--color-text-dark)">C</text>
+                    
+                    <text x="340" y="190" fill="var(--color-dusty-rose)">$\theta$</text>
+
+                    <text x="225" y="150" fill="var(--color-sage-green)" text-anchor="middle">Hypotenuse</text>
+                    <text x="225" y="215" fill="var(--color-dusty-rose)" text-anchor="middle">Base (Adjacent)</text>
+                    <text x="80" y="125" fill="var(--color-muted-gold)" text-anchor="middle">Perpendicular (Opposite)</text>
+                </svg>
+                 [Aesthetic diagram of a Right-Angled Triangle with sides labeled Hypotenuse, Opposite, and Adjacent relative to an angle $\theta$]
+            </div>
+            
+            <h4>The Six Ratios: SOH CAH TOA</h4>
+            <p>The entire language of Trigonometry is encapsulated in six ratios, which are constant for a fixed angle, no matter how large the triangle gets. They are the definition of the relationship between the angle and the sides:</p>
+            
+            <button class="aesthetic-button show-formula-toggle" data-target="six-ratios-formula">Show The Secret Ratios (SOH CAH TOA)</button>
+            <div id="six-ratios-formula" class="formula-box hidden">
+                <p>1. **Sine (sin):** The ratio of the side **Opposite** the angle to the **Hypotenuse**.</p>
+                $$\large \sin(\theta) = \frac{\text{Opposite}}{\text{Hypotenuse}}$$
+                <p>2. **Cosine (cos):** The ratio of the side **Adjacent** to the angle to the **Hypotenuse**.</p>
+                $$\large \cos(\theta) = \frac{\text{Adjacent}}{\text{Hypotenuse}}$$
+                <p>3. **Tangent (tan):** The ratio of the side **Opposite** to the side **Adjacent**.</p>
+                $$\large \tan(\theta) = \frac{\text{Opposite}}{\text{Adjacent}}$$
+            </div>
+
+            <p>The other three ratios (Cosecant, Secant, Cotangent) are simply the reciprocal, or inverse, of these primary three.</p>
+
+            <h4>Trigonometric Identities: The Laws of the Land</h4>
+            <p>These are the fundamental, unshakable laws that relate the ratios to each other. They allow us to transform and simplify complex expressions. The most important one is the identity derived directly from the Pythagorean Theorem:</p>
+            
+            <button class="aesthetic-button show-formula-toggle" data-target="pythagorean-identity">Show The Core Identity</button>
+            <div id="pythagorean-identity" class="formula-box hidden">
+                <p><strong>The Core Pythagorean Identity:</strong></p>
+                $$\large \sin^2(\theta) + \cos^2(\theta) = 1$$
+            </div>
+          <hr>
+            <h4>Complementary Angles: The Hidden Symmetry</h4>
+            <p>Two angles are **complementary** if they add up to $90^\circ$. In a right triangle, the two non-right angles are always complementary. This creates a beautiful symmetry: the sine of one angle is always the cosine of the other, and vice-versa. This means if you know the ratio for $\theta$, you instantly know the ratio for $(90^\circ - \theta)$.</p>
+            
+            <button class="aesthetic-button show-formula-toggle" data-target="complementary-formula">Show Complementary Symmetry Rules</button>
+            <div id="complementary-formula" class="formula-box hidden">
+                <p>1. $\sin(90^\circ - A) = \cos A$</p>
+                <p>2. $\cos(90^\circ - A) = \sin A$</p>
+                <p>3. $\tan(90^\circ - A) = \cot A$</p>
+                <p>4. $\cot(90^\circ - A) = \tan A$</p>
+                <p>5. $\sec(90^\circ - A) = \csc A$</p>
+                <p>6. $\csc(90^\circ - A) = \sec A$</p>
+            </div>
+
+            <hr>
+            <h4 class="concept-break">Trigonometric Values of Specific Angles (The Golden Angles)</h4>
+            <p>For a few special angles ($0^\circ, 30^\circ, 45^\circ, 60^\circ, 90^\circ$), the values of the ratios are exact, beautiful fractions, and we commit them to memory as the foundation for all calculations.</p>
+            
+            <button class="aesthetic-button make-it-real-toggle" data-formula="Sine Ratio">⭐ Make it Real</button>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
