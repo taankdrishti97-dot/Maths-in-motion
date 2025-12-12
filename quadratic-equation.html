@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch 4: Quadratic Equations | Maths in Motion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chapter-common.css">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+    <header>
+        <h1>Maths in Motion</h1>
+        <nav>
+            <a href="concept-stories.html" class="aesthetic-button small-button">📚 Back to Stories</a>
+            <button id="drishti-toggle" class="aesthetic-button small-button feature-4">✨ Explain Like I'm Drishti</button>
+            <button id="dark-mode-toggle" class="aesthetic-button small-button">🌙 Sepia Mode</button>
+        </nav>
+    </header>
+
+    <main class="section-container chapter-page">
+        <h2 class="chapter-title">Chapter 4: Quadratic Equations</h2>
+        <h3 class="chapter-metaphor">A Journey With Three Characters: The Path, The Roots, and The Judge</h3>
+        
+        <article class="concept-section">
+            <p>A quadratic equation, $ax^2 + bx + c = 0$, maps out a journey defined by three powerful characters, $a$, $b$, and $c$. The overall shape of the journey is a beautiful curve called a **Parabola**—the "path of their life."</p>
+            
+            <div class="story-illustration">
+                <svg viewBox="0 0 600 300" class="parabola-path-svg">
+                    <line x1="100" y1="200" x2="500" y2="200" stroke="var(--color-warm-grey)" stroke-width="1" title="X-axis (The Ground)"/>
+                    <line x1="300" y1="50" x2="300" y2="250" stroke="var(--color-warm-grey)" stroke-width="1" title="Y-axis"/>
+                    
+                    <path d="M 100 250 C 200 50, 400 50, 500 250" fill="none" stroke="var(--color-muted-gold)" stroke-width="3" title="Parabola Path"/>
+                    
+                    <circle cx="140" cy="200" r="5" fill="var(--color-sage-green)" title="Root 1"/>
+                    <circle cx="460" cy="200" r="5" fill="var(--color-sage-green)" title="Root 2"/>
+                </svg>
+                 [Aesthetic illustration of a parabola crossing the X-axis twice, highlighting the roots]
+            </div>
+            
+            <h4>The Three Characters ($a$, $b$, $c$)</h4>
+            <ul>
+                <li><strong>$a$ (The Director):</strong> This character is the most powerful. If $a > 0$, the parabola opens **Up** (a path of optimism). If $a < 0$, it opens **Down** (a path of pessimism). It controls the width—a large $|a|$ means a narrow, dramatic path.</li>
+                <li><strong>$b$ (The Shifter):</strong> This character influences where the peak or valley (the **Vertex**) occurs, pulling the entire path left or right.</li>
+                <li><strong>$c$ (The Starting Point):</strong> The simplest character, $c$ determines where the path begins on the $y$-axis (the $y$-intercept).</li>
+            </ul>
+
+            <button class="aesthetic-button show-formula-toggle" data-target="standard-form-def">Show Standard Form</button>
+            <div id="standard-form-def" class="formula-box hidden">
+                <p><strong>Standard Form:</strong> $ax^2 + bx + c = 0$</p>
+                <p class="explanation">The foundation for all quadratic journeys. The degree is always 2.</p>
+            </div>
+
+            <h4>The Roots: Finding the Destinations</h4>
+            <p>The **roots** (or zeros) are the $x$-values where the journey hits the ground ($y=0$). There are three primary methods for finding these destinations, but one is the universal map:</p>
+            
+            <button class="aesthetic-button show-formula-toggle" data-target="quadratic-formula">The Universal Map (Quadratic Formula)</button>
+            <div id="quadratic-formula" class="formula-box hidden">
+                <p>The solutions for $x$ are:</p>
+                $$\large x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+                <p class="explanation">This formula takes the personalities of $a, b,$ and $c$ and directly calculates the two destinations.</p>
+            </div>
+
+            <hr>
+            <h4 class="concept-break">The Discriminant: The Judge of Fate</h4>
+            <p>The term inside the square root, $D = b^2 - 4ac$, is the **Discriminant**, the Judge of Fate. It decides the nature of the destinations before we even calculate them, predicting the journey's outcome:</p>
+            <ul>
+                <li>**$D > 0$ (Positive):** Two distinct, real destinations. The path crosses the ground twice.</li>
+                <li>**$D = 0$ (Zero):** One single, real destination. The path just touches the ground (a moment of perfect balance).</li>
+                <li>**$D < 0$ (Negative):** No real destinations. The path never reaches the ground (it floats above or sinks below, remaining a mystery).</li>
+            </ul>
+            
+            <button class="aesthetic-button make-it-real-toggle" data-formula="Quadratic Formula">⭐ Make it Real</button>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
