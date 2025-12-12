@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch 10: Circles | Maths in Motion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chapter-common.css">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+    <header>
+        <h1>Maths in Motion</h1>
+        <nav>
+            <a href="concept-stories.html" class="aesthetic-button small-button">📚 Back to Stories</a>
+            <button id="drishti-toggle" class="aesthetic-button small-button feature-4">✨ Explain Like I'm Drishti</button>
+            <button id="dark-mode-toggle" class="aesthetic-button small-button">🌙 Sepia Mode</button>
+        </nav>
+    </header>
+
+    <main class="section-container chapter-page">
+        <h2 class="chapter-title">Chapter 10: Circles</h2>
+        <h3 class="chapter-metaphor">The Perfect Boundary: The Eternal Connection (Tangent and Radius)</h3>
+        
+        <article class="concept-section">
+            <p>A circle is the set of all points that are equidistant from a fixed central point. It represents perfection, balance, and boundary. In this chapter, we explore how lines interact with this perfect boundary, defining three possibilities: the **Non-intersecting Line**, the **Secant** (which cuts through), and the **Tangent** (which just grazes).</p>
+            
+            <div class="story-illustration">
+                <svg viewBox="0 0 500 250" class="circle-tangent-svg">
+                    <circle cx="200" cy="125" r="75" fill="rgba(201, 153, 162, 0.2)" stroke="var(--color-dusty-rose)" stroke-width="2"/>
+                    <circle cx="200" cy="125" r="4" fill="var(--color-muted-gold)"/>
+                    <text x="210" y="120" fill="var(--color-muted-gold)">O</text>
+
+                    <line x1="25" y1="200" x2="375" y2="50" stroke="var(--color-sage-green)" stroke-width="2"/>
+                    
+                    <circle cx="270" cy="85" r="4" fill="var(--color-sage-green)"/>
+                    <text x="280" y="80" fill="var(--color-sage-green)">P</text>
+
+                    <line x1="200" y1="125" x2="270" y2="85" stroke="var(--color-muted-gold)" stroke-width="2" stroke-dasharray="4 2"/>
+
+                    <path d="M 260 87 L 265 92 L 263 97" fill="none" stroke="var(--color-muted-gold)" stroke-width="1.5"/>
+                    <text x="260" y="105" fill="var(--color-muted-gold)" font-weight="bold">90°</text>
+                </svg>
+                 [Aesthetic diagram of a circle with a radius drawn to a point of tangency, clearly marking the right angle]
+            </div>
+            
+            <h4>The Tangent-Radius Theorem (The Eternal Connection)</h4>
+            <p>A **Tangent** is a line that meets the circle at exactly one point, $P$. This theorem reveals the single most profound relationship in the chapter: the radius drawn to the point of contact ($P$) is **always perpendicular** to the tangent at that point. This perfect $90^\circ$ angle is the eternal truth of the tangent's boundary.</p>
+
+            <button class="aesthetic-button show-formula-toggle" data-target="tangent-radius-theorem">Show Theorem 10.1</button>
+            <div id="tangent-radius-theorem" class="formula-box hidden">
+                <p><strong>Theorem 10.1:</strong> The tangent at any point of a circle is perpendicular to the radius through the point of contact.</p>
+                $$\large \text{Radius } \perp \text{ Tangent at } P$$
+            </div>
+
+            <h4>Length of Tangents (The External Witness)</h4>
+            <p>If you draw two tangents to a circle from a single point outside the circle, $A$, the lengths of those two tangent segments ($AP$ and $AQ$) are always equal. The circle insists on symmetry, ensuring that the influence of any external witness is perfectly balanced in all directions.</p>
+            
+            <button class="aesthetic-button show-formula-toggle" data-target="tangent-length-theorem">Show Theorem 10.2</button>
+            <div id="tangent-length-theorem" class="formula-box hidden">
+                <p><strong>Theorem 10.2:</strong> The lengths of tangents drawn from an external point to a circle are equal.</p>
+                $$\large AP = AQ$$
+            </div>
+
+            <hr>
+            <h4 class="concept-break">Parallel Tangents (The Perfect Pair)</h4>
+            <p>A circle can have infinitely many tangents, but it can only have a maximum of two parallel tangents at any given moment. These two tangents must be drawn at the endpoints of a single **diameter**, perfectly opposing each other across the center.</p>
+            
+            <button class="aesthetic-button make-it-real-toggle" data-formula="Tangent-Radius Theorem">⭐ Make it Real</button>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
