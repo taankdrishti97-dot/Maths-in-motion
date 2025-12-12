@@ -1,0 +1,84 @@
+/* chapter-common.css */
+
+.chapter-page {
+    padding: 60px 80px;
+}
+
+.chapter-title {
+    font-size: 3em;
+    color: var(--color-muted-gold);
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.chapter-metaphor {
+    font-size: 1.5em;
+    color: var(--color-warm-grey);
+    text-align: center;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.concept-section h4 {
+    color: var(--color-sage-green);
+    border-bottom: 2px solid rgba(156, 183, 169, 0.3); /* Soft underscore */
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+/* Formula Toggle Styling (Hidden initially) */
+.formula-box {
+    background-color: var(--color-cream-background);
+    border: 1px dashed var(--color-dusty-rose);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+.formula-box.visible {
+    opacity: 1;
+    max-height: 200px; /* Adjust height based on content */
+    padding: 15px;
+}
+
+/* Story Illustration Styling (for high-end SVG) */
+.story-illustration {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.number-line-svg {
+    width: 100%;
+    max-width: 600px;
+    height: 200px;
+}
+
+/* Small Button Styling */
+.small-button {
+    padding: 10px 18px;
+    font-size: 1em !important; /* Override large button size */
+}
+
+/* Drishti explanation styling (hidden text container) */
+.drishti-explanation {
+    background-color: var(--color-dusty-rose);
+    color: var(--color-cream-background);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    font-style: italic;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.6s ease-in-out, max-height 0.6s ease-in-out;
+}
+.drishti-explanation.active {
+    opacity: 1;
+    max-height: 500px;
+}
