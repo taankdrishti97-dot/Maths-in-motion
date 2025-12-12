@@ -1,27 +1,59 @@
-// script.js (Dark Mode Toggle Logic)
-
+// script.js (Enhanced) - REPLACE EXISTING CONTENT WITH THIS
 document.addEventListener('DOMContentLoaded', () => {
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
     const body = document.body;
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
 
-    // Function to set the dark mode (sepia) class
+    // --- 1. DARK MODE LOGIC ---
     const toggleDarkMode = () => {
         body.classList.toggle('dark-mode');
-        // Update button text
-        if (body.classList.contains('dark-mode')) {
-            darkModeToggle.textContent = '☀️ Day Mode';
-        } else {
-            darkModeToggle.textContent = '🌙 Sepia Mode';
-        }
-        // Save the user's preference (optional but recommended)
-        localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        const isDark = body.classList.contains('dark-mode');
+        darkModeToggle.textContent = isDark ? '☀️ Day Mode' : '🌙 Sepia Mode';
+        localStorage.setItem('darkMode', isDark);
     };
 
-    // Check for saved preference on load
-    if (localStorage.getItem('darkMode') === 'true') {
-        toggleDarkMode(); // Toggle it on if the preference is saved as true
+    if (darkModeToggle) {
+        // Check for saved preference on load
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.textContent = '☀️ Day Mode';
+        }
+        darkModeToggle.addEventListener('click', toggleDarkMode);
     }
 
-    // Event listener for the button
-    darkModeToggle.addEventListener('click', toggleDarkMode);
+    // --- 2. FORMULA TOGGLE LOGIC ---
+    const formulaToggles = document.querySelectorAll('.show-formula-toggle');
+    formulaToggles.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetId = button.getAttribute('data-target');
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                targetElement.classList.toggle('visible');
+                // Update button text for better UX
+                if (targetElement.classList.contains('visible')) {
+                    button.textContent = 'Hide Formula / Definition';
+                } else {
+                    button.textContent = 'Show Formula / Definition';
+                }
+            }
+        });
+    });
+
+    // --- 3. EXPLAIN LIKE I'M DRISHTI / MAKE IT REAL LOGIC (Placeholders) ---
+    const mangoToggle = document.getElementById('mango-toggle');
+    
+    if (mangoToggle) {
+        mangoToggle.addEventListener('click', () => {
+            alert("✨ 'Explain Like I'm mango' feature is now active! The magic metaphors will appear below the concepts.");
+            // In a full implementation, this would dynamically insert new, metaphor-rich text sections.
+        });
+    }
+
+    const makeItRealToggles = document.querySelectorAll('.make-it-real-toggle');
+    makeItRealToggles.forEach(button => {
+        button.addEventListener('click', () => {
+            const formula = button.getAttribute('data-formula');
+            alert(`⭐ Making '${formula}' Real:\n\nIf Prime Factorization is the DNA of a number, then the number of times you can divide a cake equally among friends determines if the crumbs (decimal) ever truly end!`);
+        });
+    });
 });
