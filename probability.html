@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch 14: Probability | Maths in Motion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chapter-common.css">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+    <header>
+        <h1>Maths in Motion</h1>
+        <nav>
+            <a href="concept-stories.html" class="aesthetic-button small-button">📚 Back to Stories</a>
+            <button id="drishti-toggle" class="aesthetic-button small-button feature-4">✨ Explain Like I'm Drishti</button>
+            <button id="dark-mode-toggle" class="aesthetic-button small-button">🌙 Sepia Mode</button>
+        </nav>
+    </header>
+
+    <main class="section-container chapter-page">
+        <h2 class="chapter-title">Chapter 14: Probability</h2>
+        <h3 class="chapter-metaphor">Predicting the Future: The Art of Knowing the Odds</h3>
+        
+        <article class="concept-section">
+            <p>Probability is a measure of the likelihood that an event will occur. It is the core mathematical tool for handling uncertainty, allowing us to quantify our expectations. All probability values must fall within the range of $0$ (impossible event) and $1$ (sure event).</p>
+            
+            <div class="story-illustration">
+                <svg viewBox="0 0 600 250" class="probability-events-svg">
+                    <rect x="100" y="100" width="100" height="100" rx="10" ry="10" fill="var(--color-beige-section)" stroke="var(--color-dusty-rose)" stroke-width="2"/>
+                    <circle cx="150" cy="150" r="10" fill="var(--color-dusty-rose)"/>
+                    <text x="150" y="225" fill="var(--color-text-dark)" text-anchor="middle">Dice Roll (6 Outcomes)</text>
+
+                    <circle cx="400" cy="150" r="50" fill="var(--color-beige-section)" stroke="var(--color-sage-green)" stroke-width="2"/>
+                    <text x="400" y="160" fill="var(--color-sage-green)" font-size="24pt" text-anchor="middle">H/T</text>
+                    <text x="400" y="225" fill="var(--color-text-dark)" text-anchor="middle">Coin Toss (2 Outcomes)</text>
+                </svg>
+                 
+            </div>
+
+            <h4>The Core Definition of Probability</h4>
+            <p>The probability of an event $E$, denoted $P(E)$, is a ratio that compares the number of successful outcomes (favorable to the event) to the total possible outcomes (the sample space).</p>
+            
+            <button class="aesthetic-button show-formula-toggle" data-target="probability-formula">Show The Core Probability Formula</button>
+            <div id="probability-formula" class="formula-box hidden">
+                $$\large P(E) = \frac{\text{Number of Favourable Outcomes}}{\text{Total Number of Possible Outcomes}}$$
+                <p class="explanation">
+                    The probability $P(E)$ is always between 0 and 1, inclusive: $0 \le P(E) \le 1$.
+                </p>
+            </div>
+
+            <h4>Complementary Events: The Opposite Outcome</h4>
+            <p>Every event has a **complement**—the event that it does **not** happen. If $E$ is the event, its complement is denoted as $\bar{E}$ (or $E'$). The probability of an event and the probability of its complement must always sum to $1$, as one or the other is guaranteed to occur.</p>
+            
+            <button class="aesthetic-button show-formula-toggle" data-target="complementary-formula">Show The Complement Rule</button>
+            <div id="complementary-formula" class="formula-box hidden">
+                <p>The sum of the probabilities of an event and its complement is $1$:</p>
+                $$\large P(E) + P(\bar{E}) = 1$$
+                <p>Therefore, to find the probability of the complement:</p>
+                $$\large P(\bar{E}) = 1 - P(E)$$
+            </div>
+
+            <hr>
+            <h4 class="concept-break">Key Terminology and Certainty</h4>
+            <ul>
+                <li>**Elementary Event:** An outcome of an experiment that has only one single result (e.g., getting a '3' on a dice roll).</li>
+                <li>**Impossible Event:** An event that can never happen. Its probability is **$0$**. (e.g., Rolling an 8 on a standard six-sided die.)</li>
+                <li>**Sure (Certain) Event:** An event that is guaranteed to happen. Its probability is **$1$**. (e.g., Rolling a number less than 7 on a standard six-sided die.)</li>
+            </ul>
+            
+            <button class="aesthetic-button make-it-real-toggle" data-formula="Probability Formula">⭐ Make it Real</button>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
