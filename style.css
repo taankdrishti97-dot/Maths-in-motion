@@ -1,0 +1,132 @@
+/* style.css (Initial Setup & Vibe Definition) */
+:root {
+    /* VIBE: Honey tones, soft warmth, clean visuals */
+    --color-cream-background: #FAF9F6; /* Soft cream / off-white background */
+    --color-beige-section: #F5E8D6; /* Honey-beige sections */
+    --color-warm-grey: #A39D9B; /* Warm grey accents */
+    --color-muted-gold: #C9A44B; /* Muted gold highlights */
+    --color-sage-green: #9CB7A9; /* Sage green buttons */
+    --color-dusty-rose: #C999A2; /* Dusty rose buttons */
+    --color-text-dark: #333333;
+    --font-serif: 'Georgia', serif; /* Elegant font choice */
+}
+
+/* Base Styles */
+body {
+    background-color: var(--color-cream-background);
+    color: var(--color-text-dark);
+    font-family: var(--font-serif);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.5s, color 0.5s; /* For smooth Dark Mode transition */
+}
+
+/* Section Styling (e.g., for the main content area) */
+.section-container {
+    background-color: var(--color-beige-section);
+    border-radius: 10px;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 900px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+}
+
+/* Header and Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: var(--color-muted-gold);
+    letter-spacing: 2px;
+}
+
+/* Button Styling (Aesthetic, soft, inviting) */
+.aesthetic-button {
+    background-color: var(--color-sage-green);
+    color: var(--color-cream-background);
+    padding: 15px 30px;
+    margin: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.aesthetic-button:hover {
+    background-color: var(--color-dusty-rose); /* Highlight-on-hover */
+    transform: translateY(-2px); /* Soft animation */
+}
+
+/* Poetic Quote Styling */
+.poetic-quote {
+    font-style: italic;
+    font-size: 1.8em;
+    text-align: center;
+    margin: 60px 0;
+    color: var(--color-warm-grey);
+    border-left: 3px solid var(--color-muted-gold);
+    padding-left: 20px;
+}
+
+/* Illustration Styling */
+.calming-illustration {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.motion-svg {
+    width: 100%;
+    max-width: 400px;
+    height: 100px;
+}
+
+/* Feature Button Layout */
+.feature-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Space between the big buttons */
+    margin-top: 50px;
+}
+
+.feature-buttons .aesthetic-button {
+    flex-basis: 40%; /* Make them large, two per row */
+    min-width: 250px;
+    padding: 25px 40px;
+    font-weight: bold;
+    font-size: 1.4em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific button color variations */
+.feature-1 { background-color: var(--color-sage-green); }
+.feature-2 { background-color: var(--color-dusty-rose); }
+.feature-3 { background-color: var(--color-muted-gold); color: var(--color-cream-background); }
+.feature-4 { background-color: var(--color-warm-grey); }
+
+
+/* --- DARK MODE (Sepia) STYLES --- */
+
+body.dark-mode {
+    /* VIBE: Warm Sepia Tones */
+    --color-cream-background: #382D24; /* Dark Sepia Background */
+    --color-beige-section: #4F3E34; /* Darker Sepia Sections */
+    --color-warm-grey: #D5C2B4; /* Lighter Text/Accents */
+    --color-muted-gold: #FFD700; /* Bright Gold Accent (stands out) */
+    --color-sage-green: #7A8D7E; /* Muted Button */
+    --color-dusty-rose: #A37984; /* Muted Button */
+    --color-text-dark: #F5F5DC; /* Creamy White Text */
+}
+
+/* Ensure elements like sections change color in dark mode */
+body.dark-mode .section-container {
+    background-color: var(--color-beige-section);
+}
