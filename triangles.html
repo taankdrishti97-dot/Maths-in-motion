@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch 6: Triangles | Maths in Motion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chapter-common.css">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+    <header>
+        <h1>Maths in Motion</h1>
+        <nav>
+            <a href="concept-stories.html" class="aesthetic-button small-button">📚 Back to Stories</a>
+            <button id="drishti-toggle" class="aesthetic-button small-button feature-4">✨ Explain Like I'm Drishti</button>
+            <button id="dark-mode-toggle" class="aesthetic-button small-button">🌙 Sepia Mode</button>
+        </nav>
+    </header>
+
+    <main class="section-container chapter-page">
+        <h2 class="chapter-title">Chapter 6: Triangles</h2>
+        <h3 class="chapter-metaphor">Foundations of Reality: The Shape of Stability and Similarity</h3>
+        
+        <article class="concept-section">
+            <p>The Triangle is the most fundamental polygon—the architect’s choice for stability. This chapter explores how two triangles relate to one another: Are they identical copies (Congruent), or do they simply share the same perfect shape but exist at different scales (Similar)?</p>
+            
+            <div class="story-illustration">
+                <svg viewBox="0 0 600 250" class="triangle-comparison-svg">
+                    <polygon points="100,200 150,100 200,200" fill="rgba(156, 183, 169, 0.2)" stroke="var(--color-sage-green)" stroke-width="2"/>
+                    <polygon points="250,200 300,100 350,200" fill="rgba(156, 183, 169, 0.2)" stroke="var(--color-sage-green)" stroke-width="2"/>
+                    <text x="225" y="60" fill="var(--color-sage-green)" text-anchor="middle" font-size="14pt">CONGRUENT (Identical)</text>
+
+                    <polygon points="450,200 500,150 550,200" fill="rgba(201, 153, 162, 0.2)" stroke="var(--color-dusty-rose)" stroke-width="2"/>
+                    <polygon points="460,200 500,160 540,200" fill="none" stroke="var(--color-dusty-rose)" stroke-width="1"/>
+                    <text x="500" y="60" fill="var(--color-dusty-rose)" text-anchor="middle" font-size="14pt">SIMILAR (Same Shape)</text>
+                </svg>
+                 [Aesthetic illustration comparing two identical triangles (congruent) and two triangles of the same shape but different size (similar)]
+            </div>
+            
+            <h4>The Basic Proportionality Theorem (BPT) / Thales Theorem</h4>
+            <p>The BPT is the first key to unlocking Similarity. It states that if a line is drawn parallel to one side of a triangle to intersect the other two sides in distinct points, the other two sides are divided in the same ratio. It's the law of proportion within a stable structure.</p>
+
+            <button class="aesthetic-button show-formula-toggle" data-target="bpt-formula">Show BPT Statement and Ratio</button>
+            <div id="bpt-formula" class="formula-box hidden">
+                <p>In $\triangle ABC$, if $DE \parallel BC$, then:</p>
+                $$\large \frac{AD}{DB} = \frac{AE}{EC}$$
+                <p class="explanation">The parts created by the parallel line maintain a beautiful, equal ratio.</p>
+            </div>
+
+            <h4>Criteria for Similarity (The Three Tests)</h4>
+            <p>To prove two triangles are similar, we don't need to measure every side and angle. We only need to pass one of these three elegant tests:</p>
+            <ul>
+                <li>**AA (Angle-Angle):** If two angles of one triangle are equal to two angles of another, the third angles must also be equal, making the shapes identical.</li>
+                <li>**SSS (Side-Side-Side):** If the ratio of all three corresponding sides is equal, the shapes are similar.</li>
+                <li>**SAS (Side-Angle-Side):** If the ratio of two corresponding sides is equal, and the included angle is also equal, the shapes are similar.</li>
+            </ul>
+
+            <button class="aesthetic-button show-formula-toggle" data-target="area-ratio">Show Area Ratio Rule</button>
+            <div id="area-ratio" class="formula-box hidden">
+                <p>The ratio of the areas of two similar triangles is equal to the square of the ratio of their corresponding sides:</p>
+                $$\large \frac{\text{Area}(\triangle ABC)}{\text{Area}(\triangle PQR)} = \left(\frac{AB}{PQ}\right)^2$$
+            </div>
+
+            <hr>
+            <h4 class="concept-break">Pythagoras Theorem: The Sacred Rule of Right Triangles</h4>
+            <p>The most famous rule for stability. In a right-angled triangle, the square of the hypotenuse (the longest side, the 'resultant path') is equal to the sum of the squares of the other two sides (the 'vertical and horizontal efforts').</p>
+            
+            <button class="aesthetic-button make-it-real-toggle" data-formula="Pythagoras Theorem">⭐ Make it Real</button>
+            <div id="pythagoras-formula" class="formula-box hidden">
+                <p>For a right triangle with legs $a$ and $b$, and hypotenuse $c$:</p>
+                $$\large a^2 + b^2 = c^2$$
+            </div>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
