@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch 9: Applications of Trigonometry | Maths in Motion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chapter-common.css">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+    <header>
+        <h1>Maths in Motion</h1>
+        <nav>
+            <a href="concept-stories.html" class="aesthetic-button small-button">📚 Back to Stories</a>
+            <button id="drishti-toggle" class="aesthetic-button small-button feature-4">✨ Explain Like I'm Drishti</button>
+            <button id="dark-mode-toggle" class="aesthetic-button small-button">🌙 Sepia Mode</button>
+        </nav>
+    </header>
+
+    <main class="section-container chapter-page">
+        <h2 class="chapter-title">Chapter 9: Applications of Trigonometry</h2>
+        <h3 class="chapter-metaphor">The Surveyor’s Tale: Using Sight to Understand Height and Distance</h3>
+        
+        <article class="concept-section">
+            <p>If Chapter 8 gave us the language (the Ratios), Chapter 9 gives us the practical map. This chapter is about using the language of angles to solve real-world problems involving heights and distances. We translate a physical scenario into a Right Triangle, and then we use the appropriate trigonometric ratio to find the missing side.</p>
+            
+            <div class="story-illustration">
+                <svg viewBox="0 0 600 300" class="surveyor-svg">
+                    <line x1="50" y1="280" x2="550" y2="280" stroke="var(--color-warm-grey)" stroke-width="2"/>
+                    <line x1="100" y1="280" x2="100" y2="80" stroke="var(--color-sage-green)" stroke-width="4"/>
+                    <line x1="450" y1="280" x2="100" y2="80" stroke="var(--color-dusty-rose)" stroke-width="2"/>
+                    <path d="M 450 280 L 410 280 A 40 40 0 0 0 420 250" fill="none" stroke="var(--color-muted-gold)" stroke-width="2"/>
+                    <text x="420" y="270" fill="var(--color-muted-gold)">$\theta_E$</text>
+
+                    <text x="100" y="70" fill="var(--color-sage-green)" text-anchor="middle">Unreachable Height</text>
+                    <text x="275" y="295" fill="var(--color-dusty-rose)" text-anchor="middle">Distance on Ground</text>
+                </svg>
+                
+            </div>
+            
+            <h4>Angle of Elevation (Looking Up)</h4>
+            <p>This is the angle formed between your **Horizontal Line of Sight** and your actual **Line of Sight** when you look **up** at an object. If you are standing on the ground and look up at a kite or the top of a building, that is the angle of elevation.</p>
+
+            <h4>Angle of Depression (Looking Down)</h4>
+            <p>This is the angle formed between the **Horizontal Line of Sight** (from the elevated position) and the actual **Line of Sight** when you look **down** at an object. Remember, due to geometry rules, the Angle of Depression from the top of the tower to a point on the ground is always **equal** to the Angle of Elevation from that point on the ground back to the tower!</p>
+            
+            <button class="aesthetic-button make-it-real-toggle" data-formula="Tangent Ratio">⭐ Make it Real</button>
+
+            <hr>
+            <h4 class="concept-break">The Golden Table: Exact Trigonometric Values</h4>
+            <p>For high-precision surveying, we rely on the exact ratios for these special, fundamental angles. Memorizing this table allows you to quickly solve any application problem.</p>
+            
+            <div class="trig-table-container">
+                <table class="aesthetic-table trig-table">
+                    <thead>
+                        <tr>
+                            <th>$\theta$</th>
+                            <th>$0^\circ$</th>
+                            <th>$30^\circ$</th>
+                            <th>$45^\circ$</th>
+                            <th>$60^\circ$</th>
+                            <th>$90^\circ$</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="row-sin">
+                            <th>$\sin \theta$</th>
+                            <td>$0$</td>
+                            <td>$\frac{1}{2}$</td>
+                            <td>$\frac{1}{\sqrt{2}}$</td>
+                            <td>$\frac{\sqrt{3}}{2}$</td>
+                            <td>$1$</td>
+                        </tr>
+                        <tr class="row-cos">
+                            <th>$\cos \theta$</th>
+                            <td>$1$</td>
+                            <td>$\frac{\sqrt{3}}{2}$</td>
+                            <td>$\frac{1}{\sqrt{2}}$</td>
+                            <td>$\frac{1}{2}$</td>
+                            <td>$0$</td>
+                        </tr>
+                        <tr class="row-tan">
+                            <th>$\tan \theta$</th>
+                            <td>$0$</td>
+                            <td>$\frac{1}{\sqrt{3}}$</td>
+                            <td>$1$</td>
+                            <td>$\sqrt{3}$</td>
+                            <td>Undefined</td>
+                        </tr>
+                        <tr class="row-cosec">
+                            <th>$\csc \theta$</th>
+                            <td>Undefined</td>
+                            <td>$2$</td>
+                            <td>$\sqrt{2}$</td>
+                            <td>$\frac{2}{\sqrt{3}}$</td>
+                            <td>$1$</td>
+                        </tr>
+                        <tr class="row-sec">
+                            <th>$\sec \theta$</th>
+                            <td>$1$</td>
+                            <td>$\frac{2}{\sqrt{3}}$</td>
+                            <td>$\sqrt{2}$</td>
+                            <td>$2$</td>
+                            <td>Undefined</td>
+                        </tr>
+                        <tr class="row-cot">
+                            <th>$\cot \theta$</th>
+                            <td>Undefined</td>
+                            <td>$\sqrt{3}$</td>
+                            <td>$1$</td>
+                            <td>$\frac{1}{\sqrt{3}}$</td>
+                            <td>$0$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button class="aesthetic-button show-formula-toggle" data-target="tangent-rule">Why Tangent is King</button>
+            <div id="tangent-rule" class="formula-box hidden">
+                <p>In most application problems, we know the **distance on the ground (Adjacent)** and need the **height (Opposite)**, or vice-versa. Since the Tangent ratio relates Opposite and Adjacent, it is the most frequently used tool for solving real-world height and distance problems:</p>
+                $$\large \tan \theta = \frac{\text{Opposite}}{\text{Adjacent}}$$
+            </div>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
