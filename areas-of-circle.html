@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch 11: Areas Related to Circles | Maths in Motion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chapter-common.css">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+    <header>
+        <h1>Maths in Motion</h1>
+        <nav>
+            <a href="concept-stories.html" class="aesthetic-button small-button">📚 Back to Stories</a>
+            <button id="drishti-toggle" class="aesthetic-button small-button feature-4">✨ Explain Like I'm Drishti</button>
+            <button id="dark-mode-toggle" class="aesthetic-button small-button">🌙 Sepia Mode</button>
+        </nav>
+    </header>
+
+    <main class="section-container chapter-page">
+        <h2 class="chapter-title">Chapter 11: Areas Related to Circles</h2>
+        <h3 class="chapter-metaphor">The Inner World: Defining the Space within the Perfect Form</h3>
+        
+        <article class="concept-section">
+            <p>While the previous chapter defined the circle's boundary, this chapter explores its internal properties. We are concerned with two key measures: the **Circumference** (the boundary's length, or the distance around the circle) and the **Area** (the space enclosed within the boundary).</p>
+            
+            <button class="aesthetic-button show-formula-toggle" data-target="basic-formulas">Show Core Circle Formulas</button>
+            <div id="basic-formulas" class="formula-box hidden">
+                <p><strong>Circumference (C):</strong> The length of the boundary.</p>
+                $$\large C = 2\pi r$$
+                <p><strong>Area (A):</strong> The space enclosed.</p>
+                $$\large A = \pi r^2$$
+                <p class="explanation">Both rely on the sacred ratio $\pi$ (Pi) and the radius $r$.</p>
+            </div>
+
+            <h4>The Sector: A Slice of Life</h4>
+            <p>A **Sector** is the region of the circle enclosed by two radii and the arc between them. Think of it as a perfectly cut slice of a circular pie. Its area is a simple fraction of the circle's total area, determined by the central angle ($\theta$).</p>
+            
+            <div class="story-illustration">
+                <svg viewBox="0 0 500 250" class="sector-segment-svg">
+                    <circle cx="200" cy="125" r="100" fill="none" stroke="var(--color-dusty-rose)" stroke-width="2"/>
+                    <circle cx="200" cy="125" r="4" fill="var(--color-muted-gold)"/>
+                    
+                    <path d="M 200 125 L 300 125 A 100 100 0 0 0 200 25 L 200 125 Z" fill="rgba(156, 183, 169, 0.4)" stroke="var(--color-sage-green)" stroke-width="1"/>
+                    <text x="250" y="100" fill="var(--color-text-dark)">Sector</text>
+
+                    <line x1="100" y1="125" x2="200" y1="25" stroke="var(--color-muted-gold)" stroke-width="2"/>
+                    <path d="M 200 25 A 100 100 0 0 0 100 125" fill="none" stroke="var(--color-muted-gold)" stroke-width="2"/>
+                    <text x="140" y="110" fill="var(--color-text-dark)">Segment</text>
+                    
+                    <text x="210" y="125" fill="var(--color-text-dark)">$\theta$</text>
+                </svg>
+                 [Aesthetic diagram showing a Sector and a Segment of a circle clearly labeled]
+            </div>
+
+            <button class="aesthetic-button show-formula-toggle" data-target="sector-formula">Show Sector Formulas</button>
+            <div id="sector-formula" class="formula-box hidden">
+                <p><strong>Area of a Sector (angle $\theta$ in degrees):</strong></p>
+                $$\large A_{\text{sector}} = \frac{\theta}{360^\circ} \times \pi r^2$$
+                <p><strong>Length of an Arc (Arc Length):</strong></p>
+                $$\large L_{\text{arc}} = \frac{\theta}{360^\circ} \times 2\pi r$$
+            </div>
+
+            <h4>The Segment: The Defined Territory</h4>
+            <p>A **Segment** is the region enclosed by a chord and the arc it cuts off. It represents the space left over after you separate the triangular part of the sector. Its area is calculated by the elegant subtraction:</p>
+            
+            <button class="aesthetic-button show-formula-toggle" data-target="segment-formula">Show Segment Area Calculation</button>
+            <div id="segment-formula" class="formula-box hidden">
+                <p><strong>Area of Minor Segment:</strong></p>
+                $$\large A_{\text{segment}} = A_{\text{sector}} - A_{\text{triangle (formed by radii)}}$$
+                <p class="explanation">You must calculate the area of the $\triangle OAB$ formed by the two radii and the chord $AB$ and subtract it from the area of the Sector $OAB$.</p>
+            </div>
+
+            <hr>
+            <h4 class="concept-break">Composite Shapes: The Art of Combination</h4>
+            <p>Many complex real-world designs (like race tracks, roundabouts, or artistic patterns) are composed of various combinations of circles, squares, and triangles. This chapter requires the ability to break down these complex shapes into simple, known areas and then add or subtract them to find the required final area.</p>
+            
+            <button class="aesthetic-button make-it-real-toggle" data-formula="Area of Segment">⭐ Make it Real</button>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
