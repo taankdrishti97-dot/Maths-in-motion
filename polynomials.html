@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch 2: Polynomials | Maths in Motion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chapter-common.css">
+    </head>
+<body>
+    <header>
+        <h1>Maths in Motion</h1>
+        <nav>
+            <a href="concept-stories.html" class="aesthetic-button small-button">📚 Back to Stories</a>
+            <button id="drishti-toggle" class="aesthetic-button small-button feature-4">✨ Explain Like I'm Drishti</button>
+            <button id="dark-mode-toggle" class="aesthetic-button small-button">🌙 Sepia Mode</button>
+        </nav>
+    </header>
+
+    <main class="section-container chapter-page">
+        <h2 class="chapter-title">Chapter 2: Polynomials</h2>
+        <h3 class="chapter-metaphor">A Family of Behaviors: Degree as Personality Type</h3>
+        
+        <article class="concept-section">
+            <h4>The Family Structure: Degree and Personality</h4>
+            <p>A Polynomial is like a family tree where the **Degree** (the highest power of $x$) defines the personality and potential of the entire equation. The higher the degree, the more complex and moody the graph—the more turns and twists its life path can take.</p>
+
+            <div class="story-illustration">
+                <svg viewBox="0 0 700 300" class="polynomial-moods-svg">
+                    <line x1="100" y1="200" x2="300" y2="100" stroke="var(--color-sage-green)" stroke-width="3" title="Linear: Degree 1"/>
+                    <text x="200" y="250" fill="var(--color-sage-green)" text-anchor="middle">Linear (Steady)</text>
+                    
+                    <path d="M 350 300 Q 400 50, 450 300" fill="none" stroke="var(--color-muted-gold)" stroke-width="3" title="Quadratic: Degree 2"/>
+                    <text x="400" y="250" fill="var(--color-muted-gold)" text-anchor="middle">Quadratic (Simple Turn)</text>
+                    
+                    <path d="M 500 200 C 550 50, 600 250, 650 100" fill="none" stroke="var(--color-dusty-rose)" stroke-width="3" title="Cubic: Degree 3"/>
+                    <text x="575" y="250" fill="var(--color-dusty-rose)" text-anchor="middle">Cubic (Two Mood Swings)</text>
+                </svg>
+            </div>
+            
+            <h4>The Zeros: Moments Life Hits the Ground</h4>
+            <p>The most important characteristic is where the polynomial **hits the ground**—the **Zeros** of the polynomial. These are the $x$-values where $y = 0$, the exact moments in life when the function returns to a neutral state. Geometrically, they are the points where the graph intersects the $x$-axis.</p>
+            
+            <p>A polynomial of degree $n$ can have at most $n$ zeros, meaning the number of times the "personality" crosses the neutral line is limited by its "personality type" (degree).</p>
+
+            <button class="aesthetic-button show-formula-toggle" data-target="linear-zeros">Linear Zero Formula</button>
+            <div id="linear-zeros" class="formula-box hidden">
+                <p>For a Linear Polynomial, $P(x) = ax + b$, the zero is $x = -\frac{b}{a}$.</p>
+                <p class="example">The zero is the opposite of the constant term divided by the coefficient of $x$.</p>
+            </div>
+
+            <h4>Relationship Between Zeros and Coefficients (The Family Secrets)</h4>
+            <p>For a Quadratic polynomial, $P(x) = ax^2 + bx + c$, there is a direct relationship between the roots ($\alpha$ and $\beta$) and the coefficients ($a, b, c$). These relationships are the "family secrets" that govern the polynomial's behavior.</p>
+            
+            <button class="aesthetic-button show-formula-toggle" data-target="quad-secrets">Show Quadratic Family Secrets</button>
+            <div id="quad-secrets" class="formula-box hidden">
+                <p><strong>Sum of Zeros:</strong> $\alpha + \beta = -\frac{b}{a}$</p>
+                <p><strong>Product of Zeros:</strong> $\alpha \cdot \beta = \frac{c}{a}$</p>
+                <p class="explanation">These rules let you predict the total distance and relationship between the zeros just by looking at the coefficients, without solving the equation!</p>
+            </div>
+
+            <hr>
+            <h4 class="concept-break">The Division Algorithm: The Art of Factoring</h4>
+            <p>The Division Algorithm for polynomials allows you to break down a high-degree polynomial (a complex personality) into simpler factors (smaller, manageable personalities). It's the mathematical tool for determining if one factor is truly a part of the whole.</p>
+            
+            <button class="aesthetic-button make-it-real-toggle" data-formula="Division Algorithm">⭐ Make it Real</button>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
