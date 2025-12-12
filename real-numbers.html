@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch 1: Real Numbers | Maths in Motion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chapter-common.css">
+</head>
+<body>
+    <header>
+        <h1>Maths in Motion</h1>
+        <nav>
+            <a href="concept-stories.html" class="aesthetic-button small-button">📚 Back to Stories</a>
+            <button id="drishti-toggle" class="aesthetic-button small-button feature-4">✨ Explain Like I'm Drishti</button>
+            <button id="dark-mode-toggle" class="aesthetic-button small-button">🌙 Sepia Mode</button>
+        </nav>
+    </header>
+
+    <main class="section-container chapter-page">
+        <h2 class="chapter-title">Chapter 1: Real Numbers</h2>
+        <h3 class="chapter-metaphor">The Universe’s Hidden Rules: Rational vs. Irrational Worlds</h3>
+        
+        <article class="concept-section">
+            <h4>The Two Worlds</h4>
+            <p>Imagine the entire number line as a vast, continuous coastline—this is the land of **Real Numbers**. But this coastline is inhabited by two distinct tribes, living in perfect harmony yet fundamentally different: **Rational** people and **Irrational** people.</p>
+            
+            <div class="story-illustration">
+                <svg viewBox="0 0 600 200" class="number-line-svg">
+                    <line x1="50" y1="100" x2="550" y2="100" stroke="var(--color-text-dark)" stroke-width="2" />
+                    <text x="50" y="120" fill="var(--color-text-dark)">0</text>
+                    <text x="550" y="120" fill="var(--color-text-dark)">Infinity →</text>
+                    <circle cx="200" cy="100" r="5" fill="var(--color-sage-green)" title="Rational Dot"/>
+                    <path d="M 350 95 Q 360 100, 350 105 T 340 100" fill="none" stroke="var(--color-dusty-rose)" stroke-width="2" title="Irrational Swirl"/>
+                </svg>
+            </div>
+            
+            <h4>The Rational Tribe (Predictable Patterns)</h4>
+            <p>The Rational people are orderly. They live in houses you can easily map out—they either have a finite address (like 0.5) or their address repeats in a perfect sequence (like $0.333...$). Their core belief is: **If you know where they started and what their path is, you can always predict their location.** They can always be expressed as a simple fraction, $\frac{p}{q}$, where $q$ is not zero.</p>
+
+            <button class="aesthetic-button show-formula-toggle" data-target="rational-formula">Show Formula / Definition</button>
+            <div id="rational-formula" class="formula-box hidden">
+                <p><strong>Definition:</strong> A number $x$ is Rational if $x = \frac{p}{q}$, where $p$ and $q$ are integers and $q \neq 0$.</p>
+                <p class="example">Example: $2$ (or $\frac{2}{1}$), $0.75$ (or $\frac{3}{4}$), $0.1\bar{6}$ (or $\frac{1}{6}$)</p>
+            </div>
+
+            <h4>The Irrational Tribe (Infinite Mystery)</h4>
+            <p>The Irrational people are the mystery. Their addresses are infinite and **never repeat**. When you try to find their location (like calculating $\sqrt{2}$ or $\pi$), the digits just keep coming, revealing an endless, non-repeating pattern. They are the poets and the wanderers of the number line. They prove that some things in the universe cannot be perfectly contained within a simple ratio.</p>
+            
+            <button class="aesthetic-button show-formula-toggle" data-target="irrational-formula">Show Formula / Definition</button>
+            <div id="irrational-formula" class="formula-box hidden">
+                <p><strong>Definition:</strong> A number is Irrational if it cannot be expressed in the form $\frac{p}{q}$ (where $p$ and $q$ are integers and $q \neq 0$). Their decimal expansion is non-terminating and non-repeating.</p>
+                <p class="example">Example: $\sqrt{2}$, $\sqrt{3}$, $\pi$, $e$</p>
+            </div>
+
+            <hr>
+            <h4 class="concept-break">The Fundamental Rule: Revisiting Prime Factorization</h4>
+            <p>The entire system relies on how numbers are built—their **Prime Factorization**. This is like the DNA of every whole number. Understanding this DNA helps us decide if a rational number will terminate (end cleanly) or repeat, based on the factors of the denominator ($q$).</p>
+            
+            <button class="aesthetic-button make-it-real-toggle" data-formula="Prime Factorization">⭐ Make it Real</button>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
