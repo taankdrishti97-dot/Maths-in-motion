@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch 12: Surface Areas and Volumes | Maths in Motion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chapter-common.css">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+    <header>
+        <h1>Maths in Motion</h1>
+        <nav>
+            <a href="concept-stories.html" class="aesthetic-button small-button">📚 Back to Stories</a>
+            <button id="drishti-toggle" class="aesthetic-button small-button feature-4">✨ Explain Like I'm Drishti</button>
+            <button id="dark-mode-toggle" class="aesthetic-button small-button">🌙 Sepia Mode</button>
+        </nav>
+    </header>
+
+    <main class="section-container chapter-page">
+        <h2 class="chapter-title">Chapter 12: Surface Areas and Volumes</h2>
+        <h3 class="chapter-metaphor">The Three Dimensions: Measuring the Skin and Soul of Objects</h3>
+        
+        <article class="concept-section">
+            <p>In this chapter, we enter the world of three-dimensional space, where objects possess **depth**. We seek to quantify two properties:</p>
+            <ul>
+                <li>**Surface Area (The Skin):** The measure of the exposed outer boundary or 'skin' of the object. It is a 2D measure, calculated in square units (e.g., $cm^2$).</li>
+                <li>**Volume (The Soul):** The measure of the space occupied by the object, representing what it can hold inside. It is a 3D measure, calculated in cubic units (e.g., $cm^3$).</li>
+            </ul>
+            
+            <div class="story-illustration">
+                <svg viewBox="0 0 600 300" class="combined-solids-svg">
+                    <ellipse cx="300" cy="200" rx="100" ry="25" fill="rgba(156, 183, 169, 0.3)" stroke="var(--color-sage-green)" stroke-width="2"/>
+                    <line x1="200" y1="200" x2="200" y2="100" stroke="var(--color-sage-green)" stroke-width="2"/>
+                    <line x1="400" y1="200" x2="400" y2="100" stroke="var(--color-sage-green)" stroke-width="2"/>
+                    <line x1="200" y1="100" x2="400" y2="100" stroke="var(--color-sage-green)" stroke-width="2"/>
+
+                    <path d="M 200 100 L 300 10 M 400 100 L 300 10" fill="rgba(201, 153, 162, 0.4)" stroke="var(--color-dusty-rose)" stroke-width="2"/>
+
+                    <text x="300" y="270" fill="var(--color-sage-green)" text-anchor="middle">CYLINDER</text>
+                    <text x="300" y="50" fill="var(--color-dusty-rose)" text-anchor="middle">CONE</text>
+                </svg>
+                 
+            </div>
+
+            <h4>Core Formulas for Independent Solids</h4>
+            <p>The foundation rests on the correct formulas for the primary 3D shapes.  </p>
+            
+            <button class="aesthetic-button show-formula-toggle" data-target="core-formulas">Show All Core Formulas (TSA, CSA, Volume)</button>
+            <div id="core-formulas" class="formula-box hidden">
+                <p><strong>1. Cuboid (Length $l$, Breadth $b$, Height $h$):</strong></p>
+                $$\text{TSA} = 2(lb + bh + hl)$$
+                $$\text{Volume} = l \times b \times h$$
+                
+                <p><strong>2. Cylinder (Radius $r$, Height $h$):</strong></p>
+                $$\text{CSA} = 2\pi rh$$
+                $$\text{TSA} = 2\pi r(h + r)$$
+                $$\text{Volume} = \pi r^2 h$$
+
+                <p><strong>3. Cone (Radius $r$, Height $h$, Slant Height $l$):</strong></p>
+                $$\text{Slant Height }(l) = \sqrt{r^2 + h^2}$$
+                $$\text{CSA} = \pi r l$$
+                $$\text{TSA} = \pi r (l + r)$$
+                $$\text{Volume} = \frac{1}{3} \pi r^2 h$$
+
+                <p><strong>4. Sphere (Radius $r$):</strong></p>
+                $$\text{Surface Area} = 4\pi r^2$$
+                $$\text{Volume} = \frac{4}{3} \pi r^3$$
+                
+                <p><strong>5. Hemisphere (Radius $r$):</strong></p>
+                $$\text{CSA} = 2\pi r^2$$
+                $$\text{TSA} = 3\pi r^2$$
+                $$\text{Volume} = \frac{2}{3} \pi r^3$$
+            </div>
+
+            <hr>
+            <h4 class="concept-break">Combination of Solids: The Art of Assembly</h4>
+            <p>The main challenge is calculating the properties of objects created by joining two or more basic solids (e.g., a cone placed on a cylinder).  </p>
+            
+            <p>When dealing with combined solids, the rules are different for Area and Volume:</p>
+
+            <h5>Rule for Volume (The Soul):</h5>
+            <p>When solids are joined, their souls (volumes) are simply **additive**. The total volume is the sum of the volumes of the individual parts, as space is never lost or gained in a combination.</p>
+            
+            $$\large \text{Total Volume} = \text{Volume}_1 + \text{Volume}_2$$
+            
+            <h5>Rule for Surface Area (The Skin):</h5>
+            <p>The total surface area is **NOT** the sum of the individual surface areas. When two solids are joined, the area where they touch is hidden and must be **excluded**. You must always calculate the sum of the **Curved Surface Areas (CSAs)** or the **exposed faces** of the individual parts.</p>
+            
+            $$\large \text{Total SA} = \text{CSA}_1 + \text{CSA}_2$$
+            
+            <button class="aesthetic-button make-it-real-toggle" data-formula="Combined Surface Area">⭐ Make it Real</button>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
