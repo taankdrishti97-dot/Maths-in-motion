@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch 3: Linear Equations in two variables | Maths in Motion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chapter-common.css">
+</head>
+<body>
+    <header>
+        <h1>Maths in Motion</h1>
+        <nav>
+            <a href="concept-stories.html" class="aesthetic-button small-button">📚 Back to Stories</a>
+            <button id="drishti-toggle" class="aesthetic-button small-button feature-4">✨ Explain Like I'm Drishti</button>
+            <button id="dark-mode-toggle" class="aesthetic-button small-button">🌙 Sepia Mode</button>
+        </nav>
+    </header>
+
+    <main class="section-container chapter-page">
+        <h2 class="chapter-title">Chapter 3: Pair of Linear Equations in Two Variables</h2>
+        <h3 class="chapter-metaphor">Two Journeys Crossing Paths: The Search for Common Ground</h3>
+        
+        <article class="concept-section">
+            <p>Every linear equation in two variables ($x$ and $y$) is a straight line, representing a single continuous **journey**. When you pair two such equations, you are tracking the paths of two individuals. The goal is to find if, and where, their paths overlap—a **solution** is their common ground.</p>
+            
+            <div class="story-illustration">
+                <svg viewBox="0 0 700 300" class="path-scenarios-svg">
+                    <line x1="50" y1="150" x2="650" y2="150" stroke="var(--color-warm-grey)" stroke-width="1"/>
+                    <line x1="350" y1="50" x2="350" y2="250" stroke="var(--color-warm-grey)" stroke-width="1"/>
+                    
+                    <line x1="100" y1="100" x2="600" y2="200" stroke="var(--color-sage-green)" stroke-width="2" />
+                    <line x1="100" y1="200" x2="600" y2="100" stroke="var(--color-dusty-rose)" stroke-width="2" />
+                    <circle cx="350" cy="150" r="5" fill="var(--color-muted-gold)" title="Intersection Point (Unique Solution)"/>
+                </svg>
+                  
+            </div>
+            
+            <h4>The Three Destinies (The Geometric Scenarios)</h4>
+            <p>When two journeys are plotted, only three possible destinies exist:</p>
+            
+            <ol>
+                <li>
+                    **Intersecting Paths (Unique Solution):** The two lines cross at exactly one point. They have a single, perfect moment of meeting. This is a **consistent** system.
+                </li>
+                <li>
+                    **Parallel Paths (No Solution):** The two lines run side-by-side forever, maintaining the same distance. They are mathematically destined never to meet. This is an **inconsistent** system.
+                </li>
+                <li>
+                    **Coincident Paths (Infinitely Many Solutions):** The two lines are exactly the same, one tracing the path of the other. Their journeys are inseparable, and every point on the line is a moment of meeting. This is a **consistent and dependent** system.
+                </li>
+            </ol>
+            
+            <h4>The Hidden Clues (Ratio Test)</h4>
+            <p>You don't need to draw the graphs to predict their destiny! The ratio of their coefficients ($a_1, b_1, c_1$ for the first journey and $a_2, b_2, c_2$ for the second) tells the whole story.</p>
+
+            <button class="aesthetic-button show-formula-toggle" data-target="ratio-rules">Show The Destiny Ratio Rules</button>
+            <div id="ratio-rules" class="formula-box hidden">
+                <p><strong>Two General Equations:</strong> $a_1x + b_1y + c_1 = 0$ and $a_2x + b_2y + c_2 = 0$</p>
+                <p>1. **Intersecting:** $\frac{a_1}{a_2} \neq \frac{b_1}{b_2}$</p>
+                <p>2. **Parallel:** $\frac{a_1}{a_2} = \frac{b_1}{b_2} \neq \frac{c_1}{c_2}$</p>
+                <p>3. **Coincident:** $\frac{a_1}{a_2} = \frac{b_1}{b_2} = \frac{c_1}{c_2}$</p>
+            </div>
+
+            <hr>
+            <h4 class="concept-break">Finding the Meeting Point (The Solution Methods)</h4>
+            <p>If their paths intersect, we must find the exact coordinates of their meeting. We use three high-quality techniques (methods) to achieve this:</p>
+            <ul>
+                <li>**Substitution Method:** One traveler pauses to define their location in terms of the other's movement, then substitutes that knowledge into the second journey's map.</li>
+                <li>**Elimination Method:** We subtly alter the scale of one or both journeys until one variable cancels out, instantly revealing the location of the other.</li>
+                <li>**Cross-Multiplication Method:** A compact, elegant rule for finding the intersection point directly using the coefficients.</li>
+            </ul>
+            
+            <button class="aesthetic-button make-it-real-toggle" data-formula="Elimination Method">⭐ Make it Real</button>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
