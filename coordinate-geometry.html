@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch 7: Coordinate Geometry | Maths in Motion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chapter-common.css">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+    <header>
+        <h1>Maths in Motion</h1>
+        <nav>
+            <a href="concept-stories.html" class="aesthetic-button small-button">📚 Back to Stories</a>
+            <button id="drishti-toggle" class="aesthetic-button small-button feature-4">✨ Explain Like I'm Drishti</button>
+            <button id="dark-mode-toggle" class="aesthetic-button small-button">🌙 Sepia Mode</button>
+        </nav>
+    </header>
+
+    <main class="section-container chapter-page">
+        <h2 class="chapter-title">Chapter 7: Coordinate Geometry</h2>
+        <h3 class="chapter-metaphor">Mapping the World: Giving Every Point a Story and a Home</h3>
+        
+        <article class="concept-section">
+            <p>Coordinate Geometry is the art of translating physical space into mathematical language. The **Cartesian Plane** is our map, where every point in the universe gets a unique address, $(x, y)$, defined by its horizontal journey ($x$) and its vertical journey ($y$).</p>
+            
+            <div class="story-illustration">
+                <svg viewBox="0 0 600 300" class="cartesian-plane-svg">
+                    <line x1="50" y1="150" x2="550" y2="150" stroke="var(--color-warm-grey)" stroke-width="1"/>
+                    <line x1="300" y1="50" x2="300" y2="250" stroke="var(--color-warm-grey)" stroke-width="1"/>
+                    <text x="550" y="145" fill="var(--color-text-dark)">X</text>
+                    <text x="305" y="55" fill="var(--color-text-dark)">Y</text>
+                    
+                    <circle cx="300" cy="150" r="3" fill="var(--color-muted-gold)" title="Origin (0,0)"/>
+                    
+                    <circle cx="450" cy="100" r="5" fill="var(--color-sage-green)" title="Point A (x, y)"/>
+                    <text x="455" y="100" fill="var(--color-sage-green)">(x, y)</text>
+                </svg>
+                 [Aesthetic illustration of the Cartesian Plane with axes, origin, and a single labeled point (x, y)]
+            </div>
+            
+            <h4>The Distance Formula: Measuring the Unseen Path</h4>
+            <p>This formula is the tool we use to calculate the shortest path (the distance) between two homes, $A(x_1, y_1)$ and $B(x_2, y_2)$, on our map. It is derived directly from the Pythagorean Theorem—the distance is the hypotenuse of the triangle formed by the change in $x$ and the change in $y$.</p>
+
+            <button class="aesthetic-button show-formula-toggle" data-target="distance-formula">Show The Path Measurement Formula</button>
+            <div id="distance-formula" class="formula-box hidden">
+                <p><strong>Distance $d$ between two points:</strong></p>
+                $$\large d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$$
+            </div>
+
+            <h4>The Section Formula: The Midpoint and the Divider</h4>
+            <p>Sometimes, a point $P$ doesn't have an original address, but we know it lies on the line segment $AB$ and divides that segment into a known ratio ($m:n$). The section formula precisely locates that point $P(x, y)$. The special case, when $m=n$ (ratio $1:1$), is the **Midpoint Formula**—the perfect center between the two homes.</p>
+            
+            <button class="aesthetic-button show-formula-toggle" data-target="section-formula">Show The Location Pinpoint Formula</button>
+            <div id="section-formula" class="formula-box hidden">
+                <p><strong>Coordinates of point $P(x, y)$ dividing segment $AB$ in ratio $m:n$:</strong></p>
+                $$\large P(x, y) = \left( \frac{m x_2 + n x_1}{m + n}, \frac{m y_2 + n y_1}{m + n} \right)$$
+            </div>
+
+            <hr>
+            <h4 class="concept-break">Area of a Triangle: Defining the Territory</h4>
+            <p>When three points form a triangle on the map, this formula allows us to calculate the area of the territory they enclose. Crucially, if the area calculated is zero, it means the three points do not form a triangle; they are **Collinear** (all lie on a single straight path).</p>
+            
+            <button class="aesthetic-button show-formula-toggle" data-target="area-triangle-formula">Show The Territory Calculation Formula</button>
+            <div id="area-triangle-formula" class="formula-box hidden">
+                <p><strong>Area of $\triangle$ with vertices $(x_1, y_1), (x_2, y_2), (x_3, y_3)$:</strong></p>
+                $$\large Area = \frac{1}{2} | x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2) |$$
+            </div>
+            
+            <button class="aesthetic-button make-it-real-toggle" data-formula="Distance Formula">⭐ Make it Real</button>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
