@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch 13: Statistics | Maths in Motion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chapter-common.css">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+    <header>
+        <h1>Maths in Motion</h1>
+        <nav>
+            <a href="concept-stories.html" class="aesthetic-button small-button">📚 Back to Stories</a>
+            <button id="drishti-toggle" class="aesthetic-button small-button feature-4">✨ Explain Like I'm Drishti</button>
+            <button id="dark-mode-toggle" class="aesthetic-button small-button">🌙 Sepia Mode</button>
+        </nav>
+    </header>
+
+    <main class="section-container chapter-page">
+        <h2 class="chapter-title">Chapter 13: Statistics</h2>
+        <h3 class="chapter-metaphor">Finding Meaning in Chaos: Analyzing the Patterns of Data</h3>
+        
+        <article class="concept-section">
+            <p>Statistics is the science of making sense of large amounts of data (chaos) by finding central points, common trends, and natural divisions. The three primary tools for this are the **Measures of Central Tendency**: Mean (The Average Value), Mode (The Most Common Value), and Median (The Middle Value).</p>
+            
+            <div class="story-illustration">
+                <svg viewBox="0 0 600 250" class="statistics-histogram-svg">
+                    <line x1="50" y1="230" x2="550" y2="230" stroke="var(--color-warm-grey)" stroke-width="1"/>
+                    <line x1="50" y1="30" x2="50" y2="230" stroke="var(--color-warm-grey)" stroke-width="1"/>
+                    
+                    <rect x="60" y="180" width="80" height="50" fill="rgba(156, 183, 169, 0.4)" stroke="var(--color-sage-green)" stroke-width="1"/>
+                    <rect x="160" y="130" width="80" height="100" fill="rgba(156, 183, 169, 0.4)" stroke="var(--color-sage-green)" stroke-width="1"/>
+                    <rect x="260" y="80" width="80" height="150" fill="rgba(156, 183, 169, 0.4)" stroke="var(--color-sage-green)" stroke-width="1"/>
+                    <rect x="360" y="100" width="80" height="130" fill="rgba(156, 183, 169, 0.4)" stroke="var(--color-sage-green)" stroke-width="1"/>
+                    <rect x="460" y="150" width="80" height="80" fill="rgba(156, 183, 169, 0.4)" stroke="var(--color-sage-green)" stroke-width="1"/>
+                    
+                    <text x="300" y="245" fill="var(--color-text-dark)" text-anchor="middle">Class Intervals</text>
+                    <text x="30" y="130" fill="var(--color-text-dark)" transform="rotate(-90, 30, 130)">Frequency ($f_i$)</text>
+                </svg>
+                 [Aesthetic illustration of a Histogram showing a frequency distribution]
+            </div>
+
+            <h4>1. Mean ($\bar{x}$): The True Average Value</h4>
+            <p>The Mean represents the true balancing point of the entire data set. We have three methods to calculate it, depending on the complexity of the numbers:</p>
+            
+            <button class="aesthetic-button show-formula-toggle" data-target="mean-formulas">Show All Three Mean Formulas</button>
+            <div id="mean-formulas" class="formula-box hidden">
+                <p><strong>Common Terms:</strong> $\sum f_i$ is the total frequency, $x_i$ is the class mark.</p>
+
+                <p><strong>A. Direct Method (For Simple Data):</strong></p>
+                $$\large \bar{x} = \frac{\sum f_i x_i}{\sum f_i}$$
+
+                <p><strong>B. Assumed Mean Method (For Large Numbers):</strong></p>
+                $$\large \bar{x} = a + \frac{\sum f_i d_i}{\sum f_i}$$
+                <p>where $a$ is the Assumed Mean and $d_i = x_i - a$ (the deviation).</p>
+                
+                <p><strong>C. Step-Deviation Method (For Large Deviations):</strong></p>
+                $$\large \bar{x} = a + \left(\frac{\sum f_i u_i}{\sum f_i}\right) \times h$$
+                <p>where $h$ is the Class Size, and $u_i = \frac{x_i - a}{h}$ (the stepped deviation).</p>
+            </div>
+
+            <hr>
+            <h4>2. Mode: The Most Frequent Trend</h4>
+            <p>The Mode is the value that appears most often (the trend). For grouped data, the Mode is
